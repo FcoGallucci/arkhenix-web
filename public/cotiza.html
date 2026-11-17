@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotiza · Arkhenix</title>
+<meta name="description" content="Solicita una cotización de Cerven, Corte Atlas, Verbato, el HIS o un desarrollo a medida. Cuéntanos qué necesitas y te enviamos una propuesta.">
+<link rel="canonical" href="https://arkhenix.com/cotiza">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/cotiza.css">
+</head>
+<body>
+<div class="akx-grid" aria-hidden="true"></div>
+
+<header class="akx-nav-wrap">
+<nav class="akx-nav" aria-label="Principal">
+<a href="/" class="akx-nav-brand">arkhenix<span>.</span></a>
+<div class="akx-nav-links">
+<a href="/#marcas">Marcas</a>
+<a href="/#nosotros">Nosotros</a>
+<a href="/#contacto">Contacto</a>
+</div>
+<a href="/cotiza" class="akx-nav-cta" aria-current="page">Cotiza</a>
+</nav>
+</header>
+
+<main class="cz-main">
+<div class="cz-intro">
+<p class="cz-eyebrow">[ COTIZA ]</p>
+<h1>Cuéntanos qué necesitas.</h1>
+<p class="cz-lead">Con estas respuestas preparamos una propuesta a la medida de tu organización. Te toma unos tres minutos y ninguna pregunta te compromete.</p>
+</div>
+
+<div class="cz-layout">
+<div class="cz-card akx-float" id="cz-card">
+
+<div class="cz-progress" aria-hidden="true">
+<div class="cz-progress-top"><span id="cz-step-label">Paso 1 de 5 · Soluciones</span><span id="cz-step-pct">20%</span></div>
+<div class="cz-bars"><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+
+<form id="cz-form" novalidate>
+
+<!-- Paso 1 -->
+<fieldset class="cz-step" data-step="1" data-title="Soluciones">
+<legend tabindex="-1">¿Qué te interesa cotizar?</legend>
+<p class="cz-help">Puedes elegir más de una.</p>
+<div class="cz-products">
+<label class="cz-product"><input type="checkbox" name="productos" value="cerven">
+<span class="cz-product-in"><span class="cz-swatch" style="background: #0B84E3"></span><span class="cz-product-name">Cerven</span><span class="cz-product-desc">Teleradiología: lectura e informe de estudios a distancia.</span></span></label>
+<label class="cz-product"><input type="checkbox" name="productos" value="corte">
+<span class="cz-product-in"><span class="cz-swatch" style="background: #68D3A2"></span><span class="cz-product-name">Corte Atlas</span><span class="cz-product-desc">Atlas de radiología y visor DICOM para estudio y docencia.</span></span></label>
+<label class="cz-product"><input type="checkbox" name="productos" value="verbato">
+<span class="cz-product-in"><span class="cz-swatch" style="background: #10B77F"></span><span class="cz-product-name">Verbato</span><span class="cz-product-desc">Transcripción de audio a texto, para cualquier ámbito.</span></span></label>
+<label class="cz-product"><input type="checkbox" name="productos" value="his">
+<span class="cz-product-in"><span class="cz-swatch cz-swatch-empty"></span><span class="cz-product-name">HIS <em>en desarrollo</em></span><span class="cz-product-desc">Sistema de información hospitalaria. Únete a la lista de interés.</span></span></label>
+<label class="cz-product"><input type="checkbox" name="productos" value="medida">
+<span class="cz-product-in"><span class="cz-swatch" style="background: #0E1116"></span><span class="cz-product-name">Desarrollo a medida</span><span class="cz-product-desc">Software hecho para un problema específico de tu organización.</span></span></label>
+</div>
+</fieldset>
+
+<!-- Paso 2 -->
+<fieldset class="cz-step" data-step="2" data-title="Organización" hidden>
+<legend tabindex="-1">Sobre tu organización</legend>
+<div class="cz-field">
+<span class="cz-label" id="lbl-org-tipo">Tipo de organización</span>
+<div class="cz-chips" role="radiogroup" aria-labelledby="lbl-org-tipo">
+<label class="cz-chip"><input type="radio" name="org_tipo" value="Profesional independiente"><span>Profesional independiente</span></label>
+<label class="cz-chip"><input type="radio" name="org_tipo" value="Clínica o centro de imágenes"><span>Clínica o centro de imágenes</span></label>
+<label class="cz-chip"><input type="radio" name="org_tipo" value="Hospital"><span>Hospital</span></label>
+<label class="cz-chip"><input type="radio" name="org_tipo" value="Universidad o residencia"><span>Universidad o residencia</span></label>
+<label class="cz-chip"><input type="radio" name="org_tipo" value="Empresa (no médica)"><span>Empresa (no médica)</span></label>
+<label class="cz-chip"><input type="radio" name="org_tipo" value="Otro"><span>Otro</span></label>
+</div>
+</div>
+<div class="cz-row">
+<div class="cz-field"><label class="cz-label" for="cz-org">Nombre de la organización <span class="cz-opt">opcional</span></label><input id="cz-org" name="org_nombre" type="text" autocomplete="organization" maxlength="160" class="akx-input"></div>
+</div>
+<div class="cz-row">
+<div class="cz-field"><label class="cz-label" for="cz-pais">País</label><input id="cz-pais" name="pais" type="text" autocomplete="country-name" maxlength="80" class="akx-input"></div>
+<div class="cz-field"><label class="cz-label" for="cz-ciudad">Ciudad <span class="cz-opt">opcional</span></label><input id="cz-ciudad" name="ciudad" type="text" autocomplete="address-level2" maxlength="80" class="akx-input"></div>
+</div>
+<div class="cz-field">
+<label class="cz-label" for="cz-usuarios">¿Cuántas personas lo usarían?</label>
+<select id="cz-usuarios" name="usuarios" class="akx-input">
+<option value="">Elige una opción</option>
+<option>Solo yo</option><option>2 a 10</option><option>11 a 50</option><option>51 a 200</option><option>Más de 200</option><option>Aún no lo sé</option>
+</select>
+</div>
+</fieldset>
+
+<!-- Paso 3 -->
+<fieldset class="cz-step" data-step="3" data-title="Detalles" hidden>
+<legend tabindex="-1">Detalles de lo que necesitas</legend>
+<p class="cz-help">Solo te preguntamos por las soluciones que elegiste. Si no sabes algún dato, déjalo en blanco.</p>
+
+<section class="cz-sub" data-for="cerven" hidden>
+<h3><span class="cz-swatch" style="background: #0B84E3"></span>Cerven · Teleradiología</h3>
+<div class="cz-field"><label class="cz-label" for="cz-cv-est">Estudios por mes, aproximadamente</label>
+<select id="cz-cv-est" name="cerven_estudios" class="akx-input"><option value="">Elige una opción</option><option>Menos de 100</option><option>100 a 500</option><option>500 a 2.000</option><option>Más de 2.000</option><option>Aún no lo sé</option></select></div>
+<div class="cz-field"><span class="cz-label">Modalidades</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="checkbox" name="cerven_modalidades" value="RX"><span>RX</span></label>
+<label class="cz-chip"><input type="checkbox" name="cerven_modalidades" value="TC"><span>TC</span></label>
+<label class="cz-chip"><input type="checkbox" name="cerven_modalidades" value="RM"><span>RM</span></label>
+<label class="cz-chip"><input type="checkbox" name="cerven_modalidades" value="Mamografía"><span>Mamografía</span></label>
+<label class="cz-chip"><input type="checkbox" name="cerven_modalidades" value="Ecografía"><span>Ecografía</span></label>
+<label class="cz-chip"><input type="checkbox" name="cerven_modalidades" value="Otra"><span>Otra</span></label>
+</div></div>
+<div class="cz-field"><span class="cz-label">¿Necesitas cobertura de urgencias?</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="radio" name="cerven_urgencias" value="Sí, 24/7"><span>Sí, 24/7</span></label>
+<label class="cz-chip"><input type="radio" name="cerven_urgencias" value="Solo en algunos horarios"><span>Solo en algunos horarios</span></label>
+<label class="cz-chip"><input type="radio" name="cerven_urgencias" value="No"><span>No</span></label>
+</div></div>
+<div class="cz-field"><span class="cz-label">¿Ya tienen un PACS?</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="radio" name="cerven_pacs" value="Sí"><span>Sí</span></label>
+<label class="cz-chip"><input type="radio" name="cerven_pacs" value="No"><span>No</span></label>
+<label class="cz-chip"><input type="radio" name="cerven_pacs" value="No estoy seguro"><span>No estoy seguro</span></label>
+</div></div>
+</section>
+
+<section class="cz-sub" data-for="corte" hidden>
+<h3><span class="cz-swatch" style="background: #68D3A2"></span>Corte Atlas</h3>
+<div class="cz-field"><span class="cz-label">Tipo de acceso</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="radio" name="corte_tipo" value="Individual"><span>Individual</span></label>
+<label class="cz-chip"><input type="radio" name="corte_tipo" value="Residencia o servicio"><span>Residencia o servicio</span></label>
+<label class="cz-chip"><input type="radio" name="corte_tipo" value="Universidad"><span>Universidad</span></label>
+<label class="cz-chip"><input type="radio" name="corte_tipo" value="Institución de salud"><span>Institución de salud</span></label>
+</div></div>
+<div class="cz-field"><label class="cz-label" for="cz-co-lic">Número de usuarios</label><input id="cz-co-lic" name="corte_licencias" type="text" inputmode="numeric" maxlength="20" class="akx-input" placeholder="Ej.: 25"></div>
+</section>
+
+<section class="cz-sub" data-for="verbato" hidden>
+<h3><span class="cz-swatch" style="background: #10B77F"></span>Verbato · Transcripción</h3>
+<div class="cz-field"><label class="cz-label" for="cz-vb-h">Horas de audio al mes</label>
+<select id="cz-vb-h" name="verbato_horas" class="akx-input"><option value="">Elige una opción</option><option>Menos de 10</option><option>10 a 50</option><option>50 a 200</option><option>Más de 200</option><option>Aún no lo sé</option></select></div>
+<div class="cz-field"><span class="cz-label">Tipo de contenido</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="checkbox" name="verbato_uso" value="Médico"><span>Médico</span></label>
+<label class="cz-chip"><input type="checkbox" name="verbato_uso" value="Legal"><span>Legal</span></label>
+<label class="cz-chip"><input type="checkbox" name="verbato_uso" value="Reuniones"><span>Reuniones</span></label>
+<label class="cz-chip"><input type="checkbox" name="verbato_uso" value="Educación"><span>Educación</span></label>
+<label class="cz-chip"><input type="checkbox" name="verbato_uso" value="Periodismo o medios"><span>Periodismo o medios</span></label>
+<label class="cz-chip"><input type="checkbox" name="verbato_uso" value="Otro"><span>Otro</span></label>
+</div></div>
+<div class="cz-field"><label class="cz-label" for="cz-vb-id">Idiomas</label><input id="cz-vb-id" name="verbato_idiomas" type="text" maxlength="120" class="akx-input" placeholder="Ej.: español, inglés"></div>
+</section>
+
+<section class="cz-sub" data-for="his" hidden>
+<h3><span class="cz-swatch cz-swatch-empty"></span>HIS · Sistema hospitalario</h3>
+<p class="cz-help">El HIS está en desarrollo. Con estos datos te avisamos cuando esté disponible y tenemos en cuenta tus necesidades.</p>
+<div class="cz-field"><label class="cz-label" for="cz-his-c">Tamaño del centro</label>
+<select id="cz-his-c" name="his_camas" class="akx-input"><option value="">Elige una opción</option><option>Ambulatorio, sin camas</option><option>Hasta 50 camas</option><option>50 a 200 camas</option><option>Más de 200 camas</option></select></div>
+<div class="cz-field"><span class="cz-label">Módulos de interés</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="checkbox" name="his_modulos" value="Admisión y citas"><span>Admisión y citas</span></label>
+<label class="cz-chip"><input type="checkbox" name="his_modulos" value="Historia clínica"><span>Historia clínica</span></label>
+<label class="cz-chip"><input type="checkbox" name="his_modulos" value="Facturación"><span>Facturación</span></label>
+<label class="cz-chip"><input type="checkbox" name="his_modulos" value="Farmacia"><span>Farmacia</span></label>
+<label class="cz-chip"><input type="checkbox" name="his_modulos" value="Laboratorio"><span>Laboratorio</span></label>
+<label class="cz-chip"><input type="checkbox" name="his_modulos" value="Imágenes"><span>Imágenes</span></label>
+</div></div>
+<div class="cz-field"><label class="cz-label" for="cz-his-a">¿Qué sistema usan hoy? <span class="cz-opt">opcional</span></label><input id="cz-his-a" name="his_actual" type="text" maxlength="160" class="akx-input" placeholder="Ej.: papel, planillas, otro sistema"></div>
+</section>
+
+<section class="cz-sub" data-for="medida" hidden>
+<h3><span class="cz-swatch" style="background: #0E1116"></span>Desarrollo a medida</h3>
+<div class="cz-field"><label class="cz-label" for="cz-md">¿Qué problema quieres resolver?</label><textarea id="cz-md" name="medida_desc" rows="5" maxlength="3000" class="akx-input cz-textarea" placeholder="Cuéntanos qué hace hoy tu equipo, qué te gustaría automatizar y quién lo usaría."></textarea></div>
+</section>
+</fieldset>
+
+<!-- Paso 4 -->
+<fieldset class="cz-step" data-step="4" data-title="Plazo y presupuesto" hidden>
+<legend tabindex="-1">Plazo y presupuesto</legend>
+<div class="cz-field"><span class="cz-label">¿Cuándo te gustaría empezar?</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="radio" name="inicio" value="Lo antes posible"><span>Lo antes posible</span></label>
+<label class="cz-chip"><input type="radio" name="inicio" value="En 1 a 3 meses"><span>En 1 a 3 meses</span></label>
+<label class="cz-chip"><input type="radio" name="inicio" value="En 3 a 6 meses"><span>En 3 a 6 meses</span></label>
+<label class="cz-chip"><input type="radio" name="inicio" value="Solo estoy explorando"><span>Solo estoy explorando</span></label>
+</div></div>
+<div class="cz-field"><label class="cz-label" for="cz-pres">Presupuesto mensual estimado <span class="cz-opt">opcional</span></label>
+<select id="cz-pres" name="presupuesto" class="akx-input"><option value="">Prefiero no decirlo</option><option>Menos de 100 USD</option><option>100 a 500 USD</option><option>500 a 2.000 USD</option><option>Más de 2.000 USD</option><option>Aún no lo sé</option></select></div>
+<div class="cz-field"><label class="cz-label" for="cz-com">¿Algo más que debamos saber? <span class="cz-opt">opcional</span></label>
+<textarea id="cz-com" name="comentarios" rows="5" maxlength="3000" class="akx-input cz-textarea" placeholder="Integraciones, requisitos especiales, dudas…"></textarea></div>
+</fieldset>
+
+<!-- Paso 5 -->
+<fieldset class="cz-step" data-step="5" data-title="Contacto" hidden>
+<legend tabindex="-1">¿A quién le enviamos la propuesta?</legend>
+<div class="cz-row">
+<div class="cz-field"><label class="cz-label" for="cz-nombre">Nombre y apellido</label><input id="cz-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120" class="akx-input"></div>
+<div class="cz-field"><label class="cz-label" for="cz-cargo">Cargo <span class="cz-opt">opcional</span></label><input id="cz-cargo" name="cargo" type="text" autocomplete="organization-title" maxlength="120" class="akx-input"></div>
+</div>
+<div class="cz-row">
+<div class="cz-field"><label class="cz-label" for="cz-correo">Correo</label><input id="cz-correo" name="correo" type="email" autocomplete="email" required maxlength="200" class="akx-input"></div>
+<div class="cz-field"><label class="cz-label" for="cz-tel">Teléfono o WhatsApp <span class="cz-opt">opcional</span></label><input id="cz-tel" name="telefono" type="tel" autocomplete="tel" maxlength="40" class="akx-input"></div>
+</div>
+<div class="cz-field"><span class="cz-label">¿Cómo prefieres que te contactemos?</span>
+<div class="cz-chips">
+<label class="cz-chip"><input type="radio" name="via" value="Correo" checked><span>Correo</span></label>
+<label class="cz-chip"><input type="radio" name="via" value="Llamada"><span>Llamada</span></label>
+<label class="cz-chip"><input type="radio" name="via" value="WhatsApp"><span>WhatsApp</span></label>
+</div></div>
+<div class="akx-hp" aria-hidden="true"><label for="cz-website">No completar</label><input id="cz-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<label class="cz-consent" for="cz-consent"><input id="cz-consent" type="checkbox"><span>He leído y acepto la <a href="/legal/privacidad">política de privacidad</a>. Usaremos estos datos solo para preparar y enviarte la propuesta.</span></label>
+</fieldset>
+
+<p id="cz-error" class="cz-error" role="alert"></p>
+
+<div class="cz-nav">
+<button type="button" class="cz-btn cz-btn-ghost" id="cz-back" hidden>← Atrás</button>
+<button type="button" class="cz-btn cz-btn-primary" id="cz-next">Siguiente →</button>
+<button type="submit" class="cz-btn cz-btn-primary" id="cz-submit" hidden>Enviar solicitud</button>
+</div>
+</form>
+
+<div id="cz-done" class="cz-done" hidden tabindex="-1">
+<p class="cz-eyebrow">[ SOLICITUD RECIBIDA ]</p>
+<h2>Gracias, <span id="cz-done-name"></span>.</h2>
+<p>Recibimos tu solicitud de cotización. La revisamos y te escribimos a <strong id="cz-done-mail"></strong> para afinar los detalles y enviarte la propuesta.</p>
+<a class="cz-btn cz-btn-primary" href="/">Volver al inicio</a>
+</div>
+</div>
+
+<aside class="cz-aside">
+<div class="cz-box akx-float">
+<p class="cz-box-title">TU SOLICITUD</p>
+<div id="cz-summary" class="cz-summary"><p class="cz-muted">Todavía no elegiste ninguna solución.</p></div>
+</div>
+<div class="cz-box akx-float">
+<p class="cz-box-title">QUÉ PASA DESPUÉS</p>
+<ol class="cz-next">
+<li><strong>Revisamos tu solicitud</strong> y vemos qué combinación de soluciones te sirve.</li>
+<li><strong>Te contactamos</strong> por el medio que elijas para aclarar dudas.</li>
+<li><strong>Recibes una propuesta</strong> con alcance, plazos y costo.</li>
+</ol>
+</div>
+<div class="cz-box cz-box-dark akx-float">
+<p class="cz-box-title">¿PREFIERES ESCRIBIRNOS?</p>
+<a href="mailto:contacto@arkhenix.com">contacto@arkhenix.com</a>
+</div>
+</aside>
+</div>
+</main>
+
+<footer class="cz-footer akx-float">
+<a href="/" class="cz-footer-brand">arkhenix<span>.</span></a>
+<nav aria-label="Legal" class="cz-footer-links">
+<a href="/legal/aviso-legal">Aviso legal</a>
+<a href="/legal/privacidad">Privacidad</a>
+<a href="/legal/terminos">Términos</a>
+<a href="/legal/cookies">Cookies</a>
+</nav>
+<p>© <span data-year>2026</span> Arkhenix</p>
+</footer>
+
+<script src="/assets/cotiza.js"></script>
+</body>
+</html>

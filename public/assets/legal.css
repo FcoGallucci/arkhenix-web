@@ -27,3 +27,4 @@ h1{margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.03em;font-weight:60
 .lg-nav a[aria-current=page]{background:#0E1116;color:#FFFFFF}
 .lg-foot{background:#0E1116;color:#A9ADB3;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:28px 0}
 @media (max-width:600px){.lg-body{padding:24px}h1{font-size:34px}}
+p,li{text-align:justify;-webkit-hyphens:manual;hyphens:manual}

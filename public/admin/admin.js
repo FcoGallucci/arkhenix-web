@@ -122,12 +122,12 @@
     app.innerHTML = '';
     var tabs = [
       ['textos', 'Inicio'], ['marcas', 'Marcas y videos'], ['nosotros', 'Nosotros'],
-      ['contacto', 'Contacto y pie'], ['legal', 'Datos legales'], ['mensajes', 'Mensajes'],
+      ['contacto', 'Contacto y pie'], ['legal', 'Datos legales'], ['mensajes', 'Mensajes y cotizaciones'],
     ];
     var warnings = [];
     if (!storage.content) warnings.push('Falta conectar el almacenamiento de textos (KV «CONTENT»): los cambios no se podrán guardar.');
     if (!storage.media) warnings.push('Falta conectar el almacenamiento de archivos (R2 «MEDIA»): no se podrán subir videos ni logos.');
-    if (!storage.email) warnings.push('El envío de correos del formulario no está configurado: los mensajes solo quedarán en la pestaña «Mensajes».');
+    if (!storage.email) warnings.push('El envío de correos del formulario no está configurado: los mensajes y cotizaciones solo quedarán en la pestaña «Mensajes y cotizaciones».');
     warnings.forEach(function (w) { app.appendChild(h('p', { class: 'notice', text: w })); });
 
     var tabBar = h('div', { class: 'tabs', role: 'tablist' }, tabs.map(function (t) {
@@ -356,20 +356,24 @@
   }
 
   function panelMensajes(p) {
-    p.appendChild(h('h2', { text: 'Mensajes recibidos' }));
-    p.appendChild(h('p', { class: 'muted', text: 'Copia de lo que llega por el formulario de contacto. Se borran solos a los 180 días.' }));
+    p.appendChild(h('h2', { text: 'Mensajes y cotizaciones' }));
+    p.appendChild(h('p', { class: 'muted', text: 'Copia de lo que llega por el formulario de contacto y por la página Cotiza. Se borran solos a los 180 días.' }));
     var box = h('div', {}, [h('p', { class: 'muted', text: 'Cargando…' })]);
     p.appendChild(box);
     api('GET', '/api/admin/messages').then(function (res) {
       box.innerHTML = '';
       if (!res.messages.length) { box.appendChild(h('p', { text: 'Todavía no hay mensajes.' })); return; }
       res.messages.forEach(function (m) {
-        var item = h('article', { class: 'msg' }, [
+        var isQuote = m.kind === 'cotizacion';
+        var details = (m.details || []).map(function (d) {
+          return h('div', { class: 'msg-row' }, [h('span', { class: 'mono muted', text: d.label }), h('span', { text: d.value })]);
+        });
+        var item = h('article', { class: 'msg' + (isQuote ? ' msg-quote' : '') }, [
           h('div', { class: 'msg-head' }, [
-            h('strong', { text: m.name }),
+            h('strong', {}, [h('span', { class: 'msg-tag', text: isQuote ? 'COTIZACIÓN' : 'MENSAJE' }), m.name]),
             h('span', { class: 'mono muted', text: new Date(m.createdAt).toLocaleString('es') + (m.emailed ? ' · enviado por correo' : ' · solo en el panel') }),
           ]),
-          h('p', { text: m.message }),
+          isQuote ? h('div', { class: 'msg-details' }, details) : h('p', { text: m.message }),
           h('div', { class: 'brand-tools' }, [
             h('a', { class: 'btn btn-small', href: 'mailto:' + m.email, text: 'Responder a ' + m.email }),
             h('button', { class: 'btn btn-small btn-danger', type: 'button', text: 'Borrar', onclick: function () {

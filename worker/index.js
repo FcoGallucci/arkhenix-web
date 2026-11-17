@@ -3,6 +3,7 @@
 // que usaría Cloudflare Pages (carpeta functions/).
 import * as content from '../functions/api/content.js';
 import * as contact from '../functions/api/contact.js';
+import * as quote from '../functions/api/quote.js';
 import * as login from '../functions/api/admin/login.js';
 import * as logout from '../functions/api/admin/logout.js';
 import * as me from '../functions/api/admin/me.js';
@@ -14,6 +15,7 @@ import * as media from '../functions/media/[[path]].js';
 const ROUTES = {
   '/api/content': content,
   '/api/contact': contact,
+  '/api/quote': quote,
   '/api/admin/login': login,
   '/api/admin/logout': logout,
   '/api/admin/me': me,
