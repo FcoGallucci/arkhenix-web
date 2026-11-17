@@ -14,6 +14,8 @@
   "kv_namespaces": [
     { "binding": "CONTENT", "id": "fae1cdfc0d7049cd979a6d76ca98ff38" }
   ],
+  "r2_buckets": [
+    { "binding": "MEDIA", "bucket_name": "arkhenix-media" }
+  ],
   "observability": { "enabled": true }
-  // Pendiente de activar (ver README): almacenamiento de archivos (R2 «MEDIA»).
 }
