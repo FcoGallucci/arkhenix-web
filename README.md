@@ -4,8 +4,7 @@ Sitio web de Arkhenix, empresa matriz de Corte Atlas, Cerven, Verbato y el HIS (
 
 Es un sitio estático: no necesita compilación.
 
-- `index.html`: la página completa.
-- `assets/`: logos e iconos.
+- `public/`: lo que se publica (página, logos, iconos).
 
 ## Publicación
 
@@ -15,7 +14,7 @@ Configuración en Cloudflare Pages:
 
 - Framework preset: **None**
 - Build command: *(vacío)*
-- Build output directory: `/`
+- Build output directory: `public`
 
 ## Pendientes
 
