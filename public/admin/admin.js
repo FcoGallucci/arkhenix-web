@@ -122,7 +122,7 @@
     app.innerHTML = '';
     var tabs = [
       ['textos', 'Inicio'], ['marcas', 'Marcas y videos'], ['nosotros', 'Nosotros'],
-      ['contacto', 'Contacto y pie'], ['legal', 'Datos legales'], ['mensajes', 'Mensajes y cotizaciones'],
+      ['contacto', 'Contacto y pie'], ['legal', 'Datos legales'], ['mensajes', 'Mensajes y cotizaciones'], ['identidad', 'Identidad'],
     ];
     var warnings = [];
     if (!storage.content) warnings.push('Falta conectar el almacenamiento de textos (KV «CONTENT»): los cambios no se podrán guardar.');
@@ -137,9 +137,9 @@
     app.appendChild(tabBar);
     var panel = h('section', { class: 'panel', role: 'tabpanel' });
     app.appendChild(panel);
-    ({ textos: panelTextos, marcas: panelMarcas, nosotros: panelNosotros, contacto: panelContacto, legal: panelLegal, mensajes: panelMensajes })[tab](panel);
+    ({ textos: panelTextos, marcas: panelMarcas, nosotros: panelNosotros, contacto: panelContacto, legal: panelLegal, mensajes: panelMensajes, identidad: function (pp) { window.AkxIdentidad.render(pp, h); } })[tab](panel);
 
-    if (tab !== 'mensajes') {
+    if (tab !== 'mensajes' && tab !== 'identidad') {
       statusEl = h('span', { class: 'status' });
       var saveBtn = h('button', { class: 'btn btn-primary', type: 'button', text: 'Guardar cambios', onclick: save });
       app.appendChild(h('div', { class: 'savebar' }, [statusEl, saveBtn]));

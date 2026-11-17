@@ -58,3 +58,45 @@ textarea{min-height:110px;resize:vertical}
 .msg-details{display:flex;flex-direction:column;margin:0 0 12px;border-top:1px solid #E4E4DF}
 .msg-row{display:grid;grid-template-columns:minmax(160px,240px) 1fr;gap:12px;padding:8px 0;border-bottom:1px solid #F0F0EC;font-size:15px;white-space:pre-wrap}
 @media (max-width:600px){.msg-row{grid-template-columns:1fr;gap:2px}}
+
+/* Identidad */
+.id-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:16px;margin:0 0 8px}
+.id-status{min-height:22px;margin:0 0 8px;font-size:14px;color:#555A61}
+.id-status.ok{color:#0F7B3F}.id-status.err{color:#B42318}
+.id-h3{margin:36px 0 8px;font-size:20px;padding-top:24px;border-top:1px solid #E4E4DF}
+.id-text{margin:0 0 16px;color:#3B3F45;text-align:justify}
+.id-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.id-grid-icons{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.id-card{border:1px solid #D9D9D3;display:flex;flex-direction:column;background:#FFFFFF}
+.id-logo{min-height:150px;display:flex;align-items:center;justify-content:center;padding:24px;border-bottom:1px solid #D9D9D3}
+.id-word{font-family:'IBM Plex Sans',sans-serif;font-weight:700;font-size:52px;letter-spacing:-0.03em;line-height:1}
+.id-logo-icon canvas{width:128px;height:128px;display:block}
+.id-logo-brand{background:#F9F9F7}
+.id-logo-brand img{max-width:100%;max-height:150px;object-fit:contain}
+.id-card-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;font-size:14px}
+.id-rules{margin:16px 0 0;padding-left:20px;color:#3B3F45;font-size:15px;display:flex;flex-direction:column;gap:6px;text-align:justify}
+.id-group{margin:16px 0 8px}
+.id-swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.id-swatch{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:0 0 12px;border:1px solid #D9D9D3;background:#FFFFFF;font:inherit;font-size:14px;text-align:left;cursor:pointer;color:#0E1116}
+.id-swatch:hover{border-color:#0E1116}
+.id-swatch>span:not(.id-chip){padding:0 12px}
+.id-chip{display:block;width:100%;height:64px;border-bottom:1px solid #E4E4DF;margin-bottom:6px}
+.id-chip-sm{display:inline-block;width:10px;height:10px;margin:0 8px 0 0;border:0;vertical-align:0}
+.id-swatch-name{font-weight:600}
+.id-swatch-use{font-size:13px;color:#555A61;line-height:1.4}
+.id-type{min-height:150px;display:flex;align-items:center;padding:24px;border-bottom:1px solid #D9D9D3;background:#F9F9F7}
+.id-sample-sans{margin:0;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:30px;letter-spacing:-0.02em;line-height:1.1}
+.id-sample-mono{margin:0;font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:0.08em}
+.id-phrases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.id-phrases>div{border:1px solid #D9D9D3;padding:20px}
+.id-phrases p{margin:0 0 8px}
+.id-phrase{font-size:22px;font-weight:600;color:#0E1116}
+.id-phrase.mono{font-size:15px;font-weight:500}
+@media print{
+  .top,.tabs,.notice,.savebar,.id-head .brand-tools,.id-status,.id-card-foot .brand-tools,.id-panel>.brand-tools{display:none !important}
+  body{background:#FFFFFF}
+  .panel{border:0;padding:0}
+  .id-card,.id-swatch,.id-phrases>div{break-inside:avoid}
+  .id-swatch,.id-chip{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .id-logo,.id-type{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}

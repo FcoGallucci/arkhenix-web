@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+<title>Arkhenix · cuadrícula (patrón repetible, celda de 32 px)</title>
+<defs><pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#E4E4DF" stroke-width="1"/></pattern></defs>
+<rect width="320" height="320" fill="#F4F4F1"/><rect width="320" height="320" fill="url(#g)"/>
+</svg>
