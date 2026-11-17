@@ -11,7 +11,9 @@
   "vars": {
     "CONTACT_TO": "contacto@arkhenix.com"
   },
+  "kv_namespaces": [
+    { "binding": "CONTENT", "id": "fae1cdfc0d7049cd979a6d76ca98ff38" }
+  ],
   "observability": { "enabled": true }
-  // Pendiente de activar (ver README): almacenamiento de textos (KV «CONTENT»)
-  // y de archivos (R2 «MEDIA»).
+  // Pendiente de activar (ver README): almacenamiento de archivos (R2 «MEDIA»).
 }
