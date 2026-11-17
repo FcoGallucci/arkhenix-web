@@ -1,0 +1,17 @@
+{
+  // Configuración para Cloudflare Workers (se usa con «npx wrangler deploy»).
+  "name": "arkhenix-web",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  },
+  "vars": {
+    "CONTACT_TO": "contacto@arkhenix.com"
+  },
+  "observability": { "enabled": true }
+  // Pendiente de activar (ver README): almacenamiento de textos (KV «CONTENT»)
+  // y de archivos (R2 «MEDIA»).
+}
