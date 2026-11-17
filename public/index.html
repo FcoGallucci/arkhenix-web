@@ -18,21 +18,23 @@
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<div style="background: #F4F4F1; color: #0E1116; font-family: 'IBM Plex Sans', system-ui, sans-serif; min-height: 100vh">
+<div class="akx-grid" aria-hidden="true"></div>
+<div style="color: #0E1116; font-family: 'IBM Plex Sans', system-ui, sans-serif; min-height: 100vh">
 
-<header style="border-bottom: 1px solid #D9D9D3">
-<nav aria-label="Principal" style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="/" style="text-decoration: none; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; color: #0E1116">arkhenix<span style="color: #2F5BEA">.</span></a>
-<div style="display: flex; flex-wrap: wrap; gap: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 14px">
-<a href="#marcas" style="text-decoration: none; padding: 12px 14px; color: #0E1116">Marcas</a>
-<a href="#nosotros" style="text-decoration: none; padding: 12px 14px; color: #0E1116">Nosotros</a>
-<a href="#contacto" style="text-decoration: none; padding: 12px 14px; color: #0E1116">Contacto</a>
+<header class="akx-nav-wrap">
+<nav class="akx-nav" aria-label="Principal">
+<a href="/" class="akx-nav-brand">arkhenix<span>.</span></a>
+<div class="akx-nav-links">
+<a href="#marcas">Marcas</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto" data-open-contact>Contacto</a>
 </div>
+<a href="#contacto" class="akx-nav-cta" data-open-contact>Escríbenos</a>
 </nav>
 </header>
 
 <main>
-<section id="inicio" style="position: relative; overflow: hidden; border-bottom: 1px solid #D9D9D3">
+<section id="inicio" style="position: relative; overflow: hidden">
 <svg aria-hidden="true" width="800" height="800" viewBox="0 0 800 800" style="position: absolute; left: 50%; top: 50%; margin-left: -400px; margin-top: -400px; pointer-events: none">
 <circle cx="400" cy="400" r="150" fill="none" stroke="#DEDED8" stroke-width="1"></circle>
 <circle cx="400" cy="400" r="250" fill="none" stroke="#DEDED8" stroke-width="1"></circle>
@@ -51,7 +53,7 @@
 <line x1="760" y1="400" x2="780" y2="400" stroke="#B9BAB3" stroke-width="1"></line>
 </g>
 </svg>
-<div style="position: relative; max-width: 880px; margin: 0 auto; padding: 200px 32px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<div style="position: relative; max-width: 880px; margin: 0 auto; padding: 150px 32px 190px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
 <p data-k="hero.eyebrow" style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #555A61">Empresa de tecnología</p>
 <h1 data-k-title style="margin: 0; font-weight: 600; font-size: clamp(44px, 7vw, 100px); line-height: 1; letter-spacing: -0.04em">Donde empieza<br>la tecnología<span style="color: #2F5BEA">.</span></h1>
 <p data-k="hero.text" style="margin: 0; font-size: 19px; line-height: 1.6; color: #3B3F45; max-width: 560px">Arkhenix es el núcleo de un grupo de productos de software, cada uno con su propia marca.</p>
@@ -60,8 +62,8 @@
 </div>
 </section>
 
-<section id="marcas" style="background-color: #F4F4F1; background-image: linear-gradient(#E4E4DF 1px, transparent 1px), linear-gradient(90deg, #E4E4DF 1px, transparent 1px); background-size: 32px 32px">
-<div style="max-width: 1280px; margin: 0 auto; padding: 88px 32px 104px; display: flex; flex-direction: column; gap: 40px">
+<section id="marcas">
+<div style="max-width: 1280px; margin: 0 auto; padding: 40px 32px 96px; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
 <h2 data-k="brandsSection.title" style="margin: 0; font-size: 44px; font-weight: 600; letter-spacing: -0.02em">Marcas</h2>
 <p data-k="brandsSection.subtitle" style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #555A61">Módulos del grupo</p>
@@ -76,7 +78,7 @@
 <li>HIS · próximamente</li>
 </ul>
 </noscript>
-<div class="akx-base" style="background: #0E1116; color: #F4F4F1; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between">
+<div class="akx-base akx-float" style="background: #0E1116; color: #F4F4F1; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between">
 <p style="margin: 0; font-weight: 700; font-size: 22px; letter-spacing: -0.02em">arkhenix<span style="color: #8EA9FF">.</span></p>
 <p data-k="lema" style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9ADB3">ORIGEN TECNOLÓGICO · SOLUCIONES DE SOFTWARE</p>
 </div>
@@ -84,8 +86,8 @@
 </div>
 </section>
 
-<section id="nosotros" style="background: #FFFFFF; border-top: 1px solid #D9D9D3">
-<div style="max-width: 1280px; margin: 0 auto; padding: 112px 32px; display: flex; flex-wrap: wrap; gap: 40px 80px">
+<section id="nosotros" style="padding: 0 32px 96px">
+<div class="akx-float" style="max-width: 1216px; margin: 0 auto; box-sizing: border-box; background: #FFFFFF; border: 1px solid #D9D9D3; padding: 72px 64px; display: flex; flex-wrap: wrap; gap: 40px 80px">
 <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #555A61">[ NOSOTROS ]</p>
 <h2 data-k="about.title" style="margin: 0; font-size: 44px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">Sobre nosotros</h2>
@@ -95,15 +97,80 @@
 </div>
 </section>
 
-<section id="contacto" style="border-top: 1px solid #D9D9D3; background: #F4F4F1">
-<div style="max-width: 1280px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 48px 80px; align-items: flex-start">
-<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<section id="contacto" style="padding: 0 32px 96px">
+<div class="akx-float" style="max-width: 1216px; margin: 0 auto; box-sizing: border-box; background: #FFFFFF; border: 1px solid #D9D9D3; padding: 64px; display: flex; flex-wrap: wrap; gap: 32px 80px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #555A61">[ CONTACTO ]</p>
 <h2 data-k="contact.title" style="margin: 0; font-size: 44px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">Hablemos.</h2>
 <p data-k="contact.text" style="margin: 0; font-size: 18px; line-height: 1.6; color: #3B3F45">Cuéntanos qué necesitas o qué te gustaría construir. Te responderemos a la brevedad.</p>
-<a data-email href="mailto:contacto@arkhenix.com" style="align-self: flex-start; min-height: 44px; display: inline-flex; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #2F5BEA">contacto@arkhenix.com</a>
 </div>
-<form id="contact-form" novalidate style="flex: 1.4 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #0E1116; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="flex: 0 1 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
+<button type="button" data-open-contact style="min-height: 56px; padding: 0 30px; border: 0; background: #2F5BEA; color: #FFFFFF; font: inherit; font-weight: 600; font-size: 17px; cursor: pointer">Escribir mensaje</button>
+<a data-email href="mailto:contacto@arkhenix.com" style="min-height: 44px; display: inline-flex; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #2F5BEA">contacto@arkhenix.com</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="akx-float akx-footer" style="background: #0E1116; color: #E6E8EB; font-family: 'IBM Plex Sans', system-ui, sans-serif">
+<div style="max-width: 1280px; margin: 0 auto; padding: 80px 32px 48px; display: flex; flex-wrap: wrap; gap: 48px 56px">
+
+<nav aria-label="Explorar" style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column">
+<h2 class="akx-fh">EXPLORAR</h2>
+<div class="akx-fline"><div></div></div>
+<div id="footer-brands" style="display: flex; flex-direction: column"></div>
+</nav>
+
+<nav aria-label="Arkhenix" style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column">
+<h2 class="akx-fh">ARKHENIX</h2>
+<div class="akx-fline"><div></div></div>
+<a class="akx-flink" href="#nosotros">Sobre nosotros</a>
+<a class="akx-flink" href="#contacto" data-open-contact>Contacto</a>
+<a class="akx-flink akx-flast" href="/admin/">Ingresar</a>
+</nav>
+
+<nav aria-label="Legal" style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column">
+<h2 class="akx-fh">LEGAL</h2>
+<div class="akx-fline"><div></div></div>
+<a class="akx-flink" href="/legal/aviso-legal">Aviso legal</a>
+<a class="akx-flink" href="/legal/privacidad">Privacidad</a>
+<a class="akx-flink" href="/legal/terminos">Términos de uso</a>
+<a class="akx-flink akx-flast" href="/legal/cookies">Cookies</a>
+</nav>
+
+<div style="flex: 1.4 1 320px; min-width: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 20px; text-align: right">
+<p style="margin: 0; font-weight: 700; font-size: 40px; letter-spacing: -0.03em; line-height: 1; color: #FFFFFF">arkhenix<span style="color: #8EA9FF">.</span></p>
+<p data-k="lema" style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #A9ADB3">ORIGEN TECNOLÓGICO · SOLUCIONES DE SOFTWARE</p>
+<p data-k="footer.description" style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9CCD1; max-width: 420px">Empresa de tecnología que crea y desarrolla soluciones de software.</p>
+<a data-email href="mailto:contacto@arkhenix.com" style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #8EA9FF; min-height: 44px; display: inline-flex; align-items: center">contacto@arkhenix.com</a>
+<div id="footer-social" style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px"></div>
+</div>
+
+</div>
+<div style="border-top: 1px solid #2A2E35">
+<div style="max-width: 1280px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9ADB3">
+<p style="margin: 0">© <span data-year>2026</span> Arkhenix. Todos los derechos reservados.</p>
+<p style="margin: 0">arkhenix.com</p>
+</div>
+</div>
+</footer>
+</div>
+
+<button type="button" id="akx-fab" class="akx-fab" aria-expanded="false" aria-controls="akx-panel">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>
+<span>Contacto</span>
+</button>
+<div id="akx-panel" class="akx-panel" role="dialog" aria-modal="false" aria-labelledby="akx-panel-title" hidden>
+<div class="akx-panel-head">
+<div>
+<p style="margin: 0 0 4px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555A61">→ <span data-email-text>contacto@arkhenix.com</span></p>
+<h2 id="akx-panel-title" style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Hablemos.</h2>
+</div>
+<button type="button" id="akx-panel-close" class="akx-panel-close" aria-label="Cerrar contacto">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+</button>
+</div>
+<form id="contact-form" novalidate style="display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; flex-wrap: wrap; gap: 16px">
 <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
 <label for="cf-name" class="akx-label">Nombre</label>
@@ -131,52 +198,6 @@
 <button type="submit" id="cf-submit" style="min-height: 52px; padding: 0 28px; border: 0; background: #2F5BEA; color: #FFFFFF; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer">Enviar mensaje</button>
 </div>
 </form>
-</div>
-</section>
-</main>
-
-<footer style="background: #0E1116; color: #E6E8EB; font-family: 'IBM Plex Sans', system-ui, sans-serif">
-<div style="max-width: 1280px; margin: 0 auto; padding: 80px 32px 48px; display: flex; flex-wrap: wrap; gap: 48px 56px">
-
-<nav aria-label="Explorar" style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column">
-<h2 class="akx-fh">EXPLORAR</h2>
-<div class="akx-fline"><div></div></div>
-<div id="footer-brands" style="display: flex; flex-direction: column"></div>
-</nav>
-
-<nav aria-label="Arkhenix" style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column">
-<h2 class="akx-fh">ARKHENIX</h2>
-<div class="akx-fline"><div></div></div>
-<a class="akx-flink" href="#nosotros">Sobre nosotros</a>
-<a class="akx-flink" href="#contacto">Contacto</a>
-<a class="akx-flink akx-flast" href="/admin/">Ingresar</a>
-</nav>
-
-<nav aria-label="Legal" style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column">
-<h2 class="akx-fh">LEGAL</h2>
-<div class="akx-fline"><div></div></div>
-<a class="akx-flink" href="/legal/aviso-legal">Aviso legal</a>
-<a class="akx-flink" href="/legal/privacidad">Privacidad</a>
-<a class="akx-flink" href="/legal/terminos">Términos de uso</a>
-<a class="akx-flink akx-flast" href="/legal/cookies">Cookies</a>
-</nav>
-
-<div style="flex: 1.4 1 320px; min-width: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 20px; text-align: right">
-<p style="margin: 0; font-weight: 700; font-size: 40px; letter-spacing: -0.03em; line-height: 1; color: #FFFFFF">arkhenix<span style="color: #8EA9FF">.</span></p>
-<p data-k="lema" style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #A9ADB3">ORIGEN TECNOLÓGICO · SOLUCIONES DE SOFTWARE</p>
-<p data-k="footer.description" style="margin: 0; font-size: 16px; line-height: 1.65; color: #C9CCD1; max-width: 420px">Empresa de tecnología que crea y desarrolla soluciones de software.</p>
-<a data-email href="mailto:contacto@arkhenix.com" style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #8EA9FF; min-height: 44px; display: inline-flex; align-items: center">contacto@arkhenix.com</a>
-<div id="footer-social" style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px"></div>
-</div>
-
-</div>
-<div style="border-top: 1px solid #2A2E35">
-<div style="max-width: 1280px; margin: 0 auto; padding: 24px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9ADB3">
-<p style="margin: 0">© <span data-year>2026</span> Arkhenix. Todos los derechos reservados.</p>
-<p style="margin: 0">arkhenix.com</p>
-</div>
-</div>
-</footer>
 </div>
 
 <template id="sim-corte">

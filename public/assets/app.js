@@ -52,6 +52,10 @@
       mails[m].textContent = c.contact.email;
       mails[m].setAttribute('href', 'mailto:' + c.contact.email);
     }
+    var mailTexts = document.querySelectorAll('[data-email-text]');
+    for (var t = 0; t < mailTexts.length; t++) mailTexts[t].textContent = c.contact.email;
+    var panelTitle = document.getElementById('akx-panel-title');
+    if (panelTitle) panelTitle.textContent = c.contact.title;
     var years = document.querySelectorAll('[data-year]');
     for (var y = 0; y < years.length; y++) years[y].textContent = String(new Date().getFullYear());
 
@@ -249,9 +253,42 @@
     });
   }
 
+  // ---------- Panel de contacto flotante ----------
+  function setupPanel() {
+    var fab = document.getElementById('akx-fab');
+    var panel = document.getElementById('akx-panel');
+    var closeBtn = document.getElementById('akx-panel-close');
+    if (!fab || !panel) return;
+    function open() {
+      panel.hidden = false;
+      fab.setAttribute('aria-expanded', 'true');
+      var first = panel.querySelector('input');
+      if (first) first.focus({ preventScroll: true });
+    }
+    function close(returnFocus) {
+      panel.hidden = true;
+      fab.setAttribute('aria-expanded', 'false');
+      if (returnFocus) fab.focus();
+    }
+    fab.addEventListener('click', function () { if (panel.hidden) open(); else close(true); });
+    if (closeBtn) closeBtn.addEventListener('click', function () { close(true); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) close(true); });
+    document.addEventListener('mousedown', function (e) {
+      if (panel.hidden) return;
+      var t = e.target;
+      if (panel.contains(t) || fab.contains(t) || (t.closest && t.closest('[data-open-contact]'))) return;
+      close(false);
+    });
+    var openers = document.querySelectorAll('[data-open-contact]');
+    for (var i = 0; i < openers.length; i++) {
+      openers[i].addEventListener('click', function (e) { e.preventDefault(); open(); });
+    }
+  }
+
   // ---------- Inicio ----------
   if (window.AKX_DEFAULT) apply(window.AKX_DEFAULT);
   setupForm();
+  setupPanel();
   if (location.protocol.indexOf('http') === 0) {
     fetch('/api/content', { headers: { Accept: 'application/json' } })
       .then(function (r) { return r.ok ? r.json() : null; })
