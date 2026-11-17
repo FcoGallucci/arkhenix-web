@@ -225,7 +225,22 @@
           } }),
         ]),
       ]));
-      box.appendChild(h('div', { class: 'row' }, [textField('Nombre', base + 'name'), textField('Etiqueta', base + 'tag')]));
+      var colorInput = h('input', { type: 'color', id: 'f-' + b.id + '-color', style: 'width: 64px; min-height: 44px; padding: 2px' });
+      colorInput.value = b.color || '#0E1116';
+      var colorNone = h('label', { style: 'display: inline-flex; align-items: center; gap: 6px; font-size: 14px' }, [
+        h('input', { type: 'checkbox', checked: !b.color }), 'Sin color',
+      ]);
+      colorInput.addEventListener('input', function () { b.color = colorInput.value.toUpperCase(); colorNone.firstChild.checked = false; updateStatus(); });
+      colorNone.firstChild.addEventListener('change', function () { b.color = colorNone.firstChild.checked ? '' : colorInput.value.toUpperCase(); updateStatus(); });
+      box.appendChild(h('div', { class: 'row' }, [
+        textField('Nombre', base + 'name'),
+        textField('Etiqueta', base + 'tag'),
+        h('div', { class: 'field', style: 'flex: 0 1 200px' }, [
+          h('label', { for: 'f-' + b.id + '-color', text: 'Color de la marca' }),
+          h('div', { style: 'display: flex; align-items: center; gap: 12px' }, [colorInput, colorNone]),
+          h('span', { class: 'hint', text: 'Se usa en la órbita y en la tarjeta.' }),
+        ]),
+      ]));
       box.appendChild(textField('Descripción', base + 'description', { multiline: true, rows: 2 }));
       var statusSel = h('select', { id: 'f-' + b.id + '-status' }, [
         h('option', { value: 'activa', text: 'Activa (con enlace)' }),
@@ -289,7 +304,7 @@
     });
 
     p.appendChild(h('button', { class: 'btn', type: 'button', text: '+ Agregar marca', onclick: function () {
-      state.brands.push({ id: 'marca-' + Date.now().toString(36), name: 'Nueva marca', tag: '', description: '', url: '', status: 'pronto', logo: '', videos: [] });
+      state.brands.push({ id: 'marca-' + Date.now().toString(36), name: 'Nueva marca', tag: '', color: '', description: '', url: '', status: 'pronto', logo: '', videos: [] });
       screenEditor();
     } }));
   }

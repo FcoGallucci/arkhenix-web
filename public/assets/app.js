@@ -84,18 +84,22 @@
   function cardHtml(b, i) {
     var soon = b.status === 'pronto';
     var line = soon ? '1px dashed #8C9096' : '1px solid #0E1116';
+    var color = b.color || '';
+    var swatch = color
+      ? '<span aria-hidden="true" style="width: 9px; height: 9px; background: ' + color + '"></span>'
+      : '<span aria-hidden="true" style="width: 9px; height: 9px; box-sizing: border-box; border: 1.5px solid #555A61"></span>';
     var logo = b.logo
-      ? '<div style="flex: 0 0 44px; height: 44px; background: #FFFFFF; border: 1px solid #D9D9D3; box-sizing: border-box; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="' + esc(b.logo) + '" alt="Logo de ' + esc(b.name) + '" style="width: 100%; height: 100%; object-fit: contain"></div>'
+      ? '<div style="flex: 0 0 48px; height: 48px; background: #FFFFFF; border: 1px solid #D9D9D3; box-sizing: border-box; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="' + esc(b.logo) + '" alt="Logo de ' + esc(b.name) + '" style="width: 100%; height: 100%; object-fit: cover"></div>'
       : '<div style="flex: 0 0 44px; height: 44px; box-sizing: border-box; border: 1.5px dashed #A9ABA4; display: flex; align-items: center; justify-content: center"><span style="font-family: \'IBM Plex Mono\', monospace; font-size: 9px; color: #555A61">LOGO</span></div>';
     var foot = b.url
       ? '<a href="' + esc(b.url) + '" style="display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 0 16px; background: #0E1116; color: #FFFFFF; font-family: \'IBM Plex Mono\', monospace; font-size: 14px; text-decoration: none">' + esc(hostOf(b.url) || 'Visitar') + ARROW + '</a>'
       : '<span style="display: flex; align-items: center; min-height: 48px; padding: 0 16px; border-top: ' + line + '; color: #3B3F45; font-family: \'IBM Plex Mono\', monospace; font-size: 14px">' + (soon ? 'EN DESARROLLO' : '') + '</span>';
     var link = soon
       ? '<div class="akx-link" aria-hidden="true" style="width: 0; height: 56px; margin: 0 auto; border-left: 2px dashed #8C9096"></div>'
-      : '<div class="akx-link" aria-hidden="true" style="position: relative; overflow: hidden; width: 2px; height: 56px; margin: 0 auto; background: #0E1116"><div class="akx-pulse" style="width: 2px; height: 18px; background: ' + ACCENT + '; animation-delay: ' + (i * 0.7).toFixed(1) + 's"></div></div>';
+      : '<div class="akx-link" aria-hidden="true" style="position: relative; overflow: hidden; width: 2px; height: 56px; margin: 0 auto; background: #0E1116"><div class="akx-pulse" style="width: 2px; height: 18px; background: ' + (color || ACCENT) + '; animation-delay: ' + (i * 0.7).toFixed(1) + 's"></div></div>';
 
     return '<article style="flex: 1 1 auto; background: ' + (soon ? '#EDEDE8' : '#FFFFFF') + '; border: ' + line + '; display: flex; flex-direction: column">' +
-      '<div style="display: flex; justify-content: space-between; gap: 8px; padding: 10px 14px; border-bottom: ' + line + '; font-family: \'IBM Plex Mono\', monospace; font-size: 12px"><span>MOD-' + pad(i + 1) + '</span><span style="color: #555A61; text-align: right">' + esc(b.tag) + '</span></div>' +
+      '<div style="display: flex; justify-content: space-between; gap: 8px; padding: 10px 14px; border-bottom: ' + line + '; font-family: \'IBM Plex Mono\', monospace; font-size: 12px"><span style="display: inline-flex; align-items: center; gap: 8px">' + swatch + 'MOD-' + pad(i + 1) + '</span><span style="color: #555A61; text-align: right">' + esc(b.tag) + '</span></div>' +
       '<div data-media></div>' +
       '<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto">' +
       '<div style="display: flex; align-items: center; gap: 12px">' + logo + '<h3 style="margin: 0; font-size: 24px; font-weight: 600' + (soon ? '; color: #3B3F45' : '') + '">' + esc(b.name) + '</h3></div>' +
@@ -200,11 +204,33 @@
     });
   }
 
+  function paintOrbit(c) {
+    for (var i = 0; i < 4; i++) {
+      var node = document.querySelector('[data-node="' + i + '"]');
+      var halo = document.querySelector('[data-node-halo="' + i + '"]');
+      var b = c.brands[i];
+      if (!node) continue;
+      if (!b) { node.style.display = 'none'; if (halo) halo.style.display = 'none'; continue; }
+      node.style.display = '';
+      if (b.color) {
+        node.setAttribute('fill', b.color);
+        node.setAttribute('stroke', 'none');
+        if (halo) { halo.style.display = ''; halo.setAttribute('stroke', b.color); }
+      } else {
+        node.setAttribute('fill', 'none');
+        node.setAttribute('stroke', '#0E1116');
+        node.setAttribute('stroke-width', '2');
+        if (halo) halo.style.display = 'none';
+      }
+    }
+  }
+
   function apply(c) {
     var j = JSON.stringify(c);
     if (j === lastJson) return;
     lastJson = j;
     applyTexts(c);
+    paintOrbit(c);
     renderBrands(c);
   }
 
