@@ -1,0 +1,48 @@
+/* Estilos del sitio de Arkhenix */
+body{margin:0;background:#F4F4F1}
+a{color:#0E1116}a:hover{color:#2F5BEA}
+@keyframes akxSpin{to{transform:rotate(360deg)}}
+@keyframes akxPulse{0%{transform:translateY(-100%)}100%{transform:translateY(320%)}}
+@keyframes akxIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes akxDraw{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+@keyframes akxGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes akxWave{0%,100%{transform:scaleY(0.25)}50%{transform:scaleY(1)}}
+@keyframes akxRoll{from{transform:translateY(0)}to{transform:translateY(-60px)}}
+@keyframes akxThumb{from{transform:translateY(0)}to{transform:translateY(70px)}}
+@keyframes akxSlice{0%{transform:scale(1)}20%{transform:scale(0.96)}40%{transform:scale(0.92)}60%{transform:scale(0.89)}80%{transform:scale(0.86)}100%{transform:scale(0.84)}}
+@keyframes akxOut{0%,55%{opacity:1}65%,100%{opacity:0}}
+@keyframes akxSwapIn{0%,55%{opacity:0}65%,100%{opacity:1}}
+@keyframes akxType{from{width:0}to{width:100%}}
+@keyframes akxBlink{0%,100%{opacity:1}50%{opacity:0.3}}
+.akx-orbit{transform-origin:400px 400px;animation:akxSpin 90s linear infinite}
+.akx-orbit-rev{transform-origin:400px 400px;animation:akxSpin 140s linear infinite reverse}
+.akx-pulse{animation:akxPulse 2.8s ease-in infinite}
+.akx-in{animation:akxIn 0.5s ease-out both}
+.akx-draw{stroke-dasharray:80;animation:akxDraw 1.2s ease-out both}
+.akx-grow{transform-origin:left center;animation:akxGrow 0.9s ease-out both}
+.akx-prog{transform-origin:left center;animation:akxGrow linear both}
+.akx-wave{transform-origin:center;animation:akxWave 1s ease-in-out infinite}
+.akx-roll{animation:akxRoll 3.6s steps(5) both}
+.akx-thumb{animation:akxThumb 3.6s steps(5) both}
+.akx-slice{transform-box:fill-box;transform-origin:center;animation:akxSlice 3.6s steps(1) both}
+.akx-out{animation:akxOut 3s both}
+.akx-swapin{animation:akxSwapIn 3s both}
+.akx-type{overflow:hidden;white-space:nowrap;animation:akxType 1.2s steps(32) both}
+.akx-blink{animation:akxBlink 1s ease-in-out infinite}
+@media (max-width: 1180px){.akx-link{display:none !important}.akx-base{margin-top:16px}}
+@media (prefers-reduced-motion: reduce){.akx-orbit,.akx-orbit-rev,.akx-pulse,.akx-in,.akx-draw,.akx-grow,.akx-prog,.akx-wave,.akx-roll,.akx-thumb,.akx-slice,.akx-swapin,.akx-type,.akx-blink{animation:none}.akx-out{display:none}}
+[data-scene][data-off]{display:none !important}
+.akx-label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#555A61}
+.akx-input{min-height:48px;box-sizing:border-box;padding:0 14px;background:#F4F4F1;border:1px solid #B9BAB3;color:#0E1116;font:inherit;font-size:16px;border-radius:0}
+.akx-input:focus{outline:2px solid #2F5BEA;outline-offset:1px;border-color:#2F5BEA;background:#FFFFFF}
+.akx-hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+#cf-submit:disabled{opacity:0.6;cursor:wait}
+a:focus-visible,button:focus-visible{outline:2px solid #2F5BEA;outline-offset:2px}
+footer a{color:#E6E8EB}footer a:hover{color:#FFFFFF}
+.akx-fh{margin:0;padding-bottom:18px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:0.16em;color:#FFFFFF}
+.akx-fline{height:1px;background:#2A2E35;position:relative}
+.akx-fline>div{position:absolute;left:0;top:-1px;width:64px;height:3px;background:#2F5BEA}
+.akx-flink{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;border-bottom:1px solid #2A2E35;text-decoration:none;font-size:17px}
+.akx-flast{border-bottom:0}
+.akx-fmuted{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#A9ADB3}
+.akx-social{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid #2A2E35;font-family:'IBM Plex Mono',monospace;font-size:12px;text-decoration:none}

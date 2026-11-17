@@ -6,7 +6,7 @@ export async function onRequestGet({ env }) {
   return new Response(JSON.stringify(content), {
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'public, max-age=30',
+      'Cache-Control': 'no-cache',
     },
   });
 }
