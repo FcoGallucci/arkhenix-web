@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arkhenix · Donde empieza la tecnología</title>
+<meta name="description" content="Arkhenix es una empresa de tecnología, núcleo de un grupo de productos de software: Corte Atlas, Cerven, Verbato y un HIS en desarrollo.">
+<meta property="og:title" content="Arkhenix · Donde empieza la tecnología">
+<meta property="og:description" content="Empresa de tecnología. Origen tecnológico · soluciones de software.">
+<meta property="og:url" content="https://arkhenix.com">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4F4F1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F4F1}
+a{color:#0E1116}a:hover{color:#2F5BEA}
+@keyframes akxSpin{to{transform:rotate(360deg)}}
+@keyframes akxPulse{0%{transform:translateY(-100%)}100%{transform:translateY(320%)}}
+@keyframes akxIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes akxDraw{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+@keyframes akxGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes akxWave{0%,100%{transform:scaleY(0.25)}50%{transform:scaleY(1)}}
+@keyframes akxRoll{from{transform:translateY(0)}to{transform:translateY(-60px)}}
+@keyframes akxThumb{from{transform:translateY(0)}to{transform:translateY(70px)}}
+@keyframes akxSlice{0%{transform:scale(1)}20%{transform:scale(0.96)}40%{transform:scale(0.92)}60%{transform:scale(0.89)}80%{transform:scale(0.86)}100%{transform:scale(0.84)}}
+@keyframes akxOut{0%,55%{opacity:1}65%,100%{opacity:0}}
+@keyframes akxSwapIn{0%,55%{opacity:0}65%,100%{opacity:1}}
+@keyframes akxType{from{width:0}to{width:100%}}
+@keyframes akxBlink{0%,100%{opacity:1}50%{opacity:0.3}}
+.akx-orbit{transform-origin:400px 400px;animation:akxSpin 90s linear infinite}
+.akx-orbit-rev{transform-origin:400px 400px;animation:akxSpin 140s linear infinite reverse}
+.akx-pulse{animation:akxPulse 2.8s ease-in infinite}
+.akx-in{animation:akxIn 0.5s ease-out both}
+.akx-draw{stroke-dasharray:80;animation:akxDraw 1.2s ease-out both}
+.akx-grow{transform-origin:left center;animation:akxGrow 0.9s ease-out both}
+.akx-prog{transform-origin:left center;animation:akxGrow linear both}
+.akx-wave{transform-origin:center;animation:akxWave 1s ease-in-out infinite}
+.akx-roll{animation:akxRoll 3.6s steps(5) both}
+.akx-thumb{animation:akxThumb 3.6s steps(5) both}
+.akx-slice{transform-box:fill-box;transform-origin:center;animation:akxSlice 3.6s steps(1) both}
+.akx-out{animation:akxOut 3s both}
+.akx-swapin{animation:akxSwapIn 3s both}
+.akx-type{overflow:hidden;white-space:nowrap;animation:akxType 1.2s steps(32) both}
+.akx-blink{animation:akxBlink 1s ease-in-out infinite}
+@media (max-width: 1180px){.akx-link{display:none !important}.akx-base{margin-top:16px}}
+@media (prefers-reduced-motion: reduce){.akx-orbit,.akx-orbit-rev,.akx-pulse,.akx-in,.akx-draw,.akx-grow,.akx-prog,.akx-wave,.akx-roll,.akx-thumb,.akx-slice,.akx-swapin,.akx-type,.akx-blink{animation:none}.akx-out{display:none}}
+
+[data-scene][data-off]{display:none !important}
+</style>
+</head>
+<body>
+<div style="background: #F4F4F1; color: #0E1116; font-family: 'IBM Plex Sans', system-ui, sans-serif; min-height: 100vh">
+
+<header style="border-bottom: 1px solid #D9D9D3">
+<nav aria-label="Principal" style="max-width: 1280px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#inicio" style="text-decoration: none; font-weight: 700; font-size: 24px; letter-spacing: -0.02em; color: #0E1116">arkhenix<span style="color: #2F5BEA">.</span></a>
+<div style="display: flex; flex-wrap: wrap; gap: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 14px">
+<a href="#marcas" style="text-decoration: none; padding: 12px 14px; color: #0E1116">Marcas</a>
+<a href="#contacto" style="text-decoration: none; padding: 12px 14px; color: #0E1116">Contacto</a>
+</div>
+</nav>
+</header>
+
+<section id="inicio" style="position: relative; overflow: hidden; border-bottom: 1px solid #D9D9D3">
+<svg aria-hidden="true" width="800" height="800" viewBox="0 0 800 800" style="position: absolute; left: 50%; top: 50%; margin-left: -400px; margin-top: -400px; pointer-events: none">
+<circle cx="400" cy="400" r="150" fill="none" stroke="#DEDED8" stroke-width="1"></circle>
+<circle cx="400" cy="400" r="250" fill="none" stroke="#DEDED8" stroke-width="1"></circle>
+<circle cx="400" cy="400" r="370" fill="none" stroke="#E6E6E1" stroke-width="1"></circle>
+<g class="akx-orbit">
+<circle cx="400" cy="400" r="250" fill="none" stroke="#2F5BEA" stroke-width="1" stroke-dasharray="2 10" opacity="0.6"></circle>
+<rect x="645" y="395" width="10" height="10" fill="#2F5BEA"></rect>
+<rect x="145" y="395" width="10" height="10" fill="#0E1116"></rect>
+<rect x="395" y="145" width="10" height="10" fill="#0E1116"></rect>
+<rect x="395" y="645" width="10" height="10" fill="none" stroke="#0E1116" stroke-width="1.5"></rect>
+</g>
+<g class="akx-orbit-rev">
+<line x1="400" y1="20" x2="400" y2="40" stroke="#B9BAB3" stroke-width="1"></line>
+<line x1="400" y1="760" x2="400" y2="780" stroke="#B9BAB3" stroke-width="1"></line>
+<line x1="20" y1="400" x2="40" y2="400" stroke="#B9BAB3" stroke-width="1"></line>
+<line x1="760" y1="400" x2="780" y2="400" stroke="#B9BAB3" stroke-width="1"></line>
+</g>
+</svg>
+<div style="position: relative; max-width: 880px; margin: 0 auto; padding: 200px 32px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #555A61">Empresa de tecnología</p>
+<h1 style="margin: 0; font-weight: 600; font-size: clamp(48px, 7vw, 100px); line-height: 1; letter-spacing: -0.04em">Donde empieza<br>la tecnología<span style="color: #2F5BEA">.</span></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #3B3F45; max-width: 560px">Arkhenix es el núcleo de un grupo de productos de software, cada uno con su propia marca.</p>
+<a href="#marcas" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; background: #0E1116; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none">Ver las marcas
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 5v14"></path><path d="M19 12l-7 7-7-7"></path></svg></a>
+</div>
+</section>
+
+<section id="marcas" style="background-color: #F4F4F1; background-image: linear-gradient(#E4E4DF 1px, transparent 1px), linear-gradient(90deg, #E4E4DF 1px, transparent 1px); background-size: 32px 32px">
+<div style="max-width: 1280px; margin: 0 auto; padding: 88px 32px 104px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<h2 style="margin: 0; font-size: 44px; font-weight: 600; letter-spacing: -0.02em">Marcas</h2>
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #555A61">Módulos del grupo</p>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+
+<!-- CORTE ATLAS -->
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column">
+<article style="flex: 1 1 auto; background: #FFFFFF; border: 1px solid #0E1116; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid #0E1116; font-family: 'IBM Plex Mono', monospace; font-size: 12px"><span>MOD-01</span><span style="color: #555A61">ATLAS · VISOR</span></div>
+<div role="img" aria-label="Demostración animada de Corte Atlas en uso" style="position: relative; height: 210px; background: #0B0D11; overflow: hidden; display: flex; flex-direction: column">
+<div style="flex: 0 0 26px; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 10px; background: #161920; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #9AA0A9">
+<span>corteatlas.com · <span data-label="corte">Atlas</span></span>
+<span style="display: flex; gap: 3px"><span data-dot="corte" style="width: 12px; height: 3px"></span><span data-dot="corte" style="width: 12px; height: 3px"></span><span data-dot="corte" style="width: 12px; height: 3px"></span></span>
+</div>
+<div style="position: relative; flex: 1 1 auto">
+
+<div data-scene="corte" style="position: absolute; inset: 0">
+<svg viewBox="0 0 300 184" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ellipse cx="150" cy="92" rx="60" ry="76" fill="#3A3E45" stroke="#D6D8DC" stroke-width="4"></ellipse>
+<ellipse cx="150" cy="92" rx="52" ry="68" fill="#5A606A"></ellipse>
+<line x1="150" y1="26" x2="150" y2="158" stroke="#3A3E45" stroke-width="1.5"></line>
+<path d="M141 70 q-14 12 -7 30 q4 -12 9 -6 z" fill="#14161A"></path>
+<path d="M159 70 q14 12 7 30 q-4 -12 -9 -6 z" fill="#14161A"></path>
+<ellipse cx="140" cy="110" rx="8" ry="6" fill="#737A85"></ellipse>
+<ellipse cx="160" cy="110" rx="8" ry="6" fill="#737A85"></ellipse>
+<g class="akx-in" style="animation-delay: 0.3s"><circle cx="137" cy="82" r="2.5" fill="#8EA9FF"></circle><line x1="137" y1="82" x2="70" y2="46" stroke="#8EA9FF" stroke-width="1"></line><text x="8" y="42" font-family="IBM Plex Mono, monospace" font-size="9" fill="#E6E8EB">Ventrículo lateral</text></g>
+<g class="akx-in" style="animation-delay: 1s"><circle cx="160" cy="110" r="2.5" fill="#8EA9FF"></circle><line x1="160" y1="110" x2="232" y2="134" stroke="#8EA9FF" stroke-width="1"></line><text x="292" y="146" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="#E6E8EB">Tálamo</text></g>
+<g class="akx-in" style="animation-delay: 1.7s"><circle cx="150" cy="34" r="2.5" fill="#8EA9FF"></circle><line x1="150" y1="34" x2="232" y2="24" stroke="#8EA9FF" stroke-width="1"></line><text x="292" y="20" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="#E6E8EB">Hoz del cerebro</text></g>
+</svg>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #8EA9FF; animation-duration: 4.2s"></div>
+</div>
+
+
+<div data-scene="corte" data-off style="position: absolute; inset: 0">
+<svg viewBox="0 0 300 184" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<g class="akx-slice">
+<ellipse cx="150" cy="92" rx="60" ry="76" fill="#3A3E45" stroke="#D6D8DC" stroke-width="4"></ellipse>
+<ellipse cx="150" cy="92" rx="52" ry="68" fill="#5A606A"></ellipse>
+<line x1="150" y1="26" x2="150" y2="158" stroke="#3A3E45" stroke-width="1.5"></line>
+<path d="M141 70 q-14 12 -7 30 q4 -12 9 -6 z" fill="#14161A"></path>
+<path d="M159 70 q14 12 7 30 q-4 -12 -9 -6 z" fill="#14161A"></path>
+<ellipse cx="140" cy="110" rx="8" ry="6" fill="#737A85"></ellipse>
+<ellipse cx="160" cy="110" rx="8" ry="6" fill="#737A85"></ellipse>
+</g>
+</svg>
+<div style="position: absolute; left: 10px; top: 8px; display: flex; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #C9CCD1">
+<span>CORTE</span>
+<span style="height: 12px; line-height: 12px; overflow: hidden; display: inline-block"><span class="akx-roll" style="display: flex; flex-direction: column"><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span></span></span>
+<span>/ 48</span>
+</div>
+<div aria-hidden="true" style="position: absolute; right: 10px; top: 14px; width: 3px; height: 100px; background: #262A31"><div class="akx-thumb" style="width: 3px; height: 30px; background: #8EA9FF"></div></div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #8EA9FF; animation-duration: 4.2s"></div>
+</div>
+
+
+<div data-scene="corte" data-off style="position: absolute; inset: 0">
+<svg viewBox="0 0 300 184" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+<ellipse cx="150" cy="92" rx="60" ry="76" fill="#3A3E45" stroke="#D6D8DC" stroke-width="4"></ellipse>
+<ellipse cx="150" cy="92" rx="52" ry="68" fill="#5A606A"></ellipse>
+<line x1="150" y1="26" x2="150" y2="158" stroke="#3A3E45" stroke-width="1.5"></line>
+<path d="M141 70 q-14 12 -7 30 q4 -12 9 -6 z" fill="#14161A"></path>
+<path d="M159 70 q14 12 7 30 q-4 -12 -9 -6 z" fill="#14161A"></path>
+<ellipse cx="140" cy="110" rx="8" ry="6" fill="#737A85"></ellipse>
+<ellipse cx="160" cy="110" rx="8" ry="6" fill="#737A85"></ellipse>
+<circle class="akx-in" cx="110" cy="92" r="3" fill="#FFC857" style="animation-delay: 0.4s"></circle>
+<line class="akx-draw" x1="110" y1="92" x2="190" y2="92" stroke="#FFC857" stroke-width="1.5" style="animation-delay: 0.6s"></line>
+<circle class="akx-in" cx="190" cy="92" r="3" fill="#FFC857" style="animation-delay: 1.7s"></circle>
+<g class="akx-in" style="animation-delay: 2s"><rect x="160" y="62" width="58" height="18" fill="#0B0D11" stroke="#FFC857" stroke-width="1"></rect><text x="189" y="75" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#FFC857">71,4 mm</text></g>
+</svg>
+<div style="position: absolute; left: 10px; top: 8px; display: flex; gap: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 10px">
+<span style="padding: 2px 6px; background: #262A31; color: #9AA0A9">Zoom</span>
+<span style="padding: 2px 6px; background: #FFC857; color: #0B0D11">Regla</span>
+<span style="padding: 2px 6px; background: #262A31; color: #9AA0A9">Ángulo</span>
+</div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #8EA9FF; animation-duration: 4.2s"></div>
+</div>
+
+
+</div>
+</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="flex: 0 0 44px; height: 44px; background: #000000; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/corte-logo.png" alt="Logo de Corte Atlas" style="width: 44px; height: 44px; object-fit: contain"></div>
+<h3 style="margin: 0; font-size: 24px; font-weight: 600">Corte Atlas</h3>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3B3F45">Atlas interactivo y visor DICOM en la web.</p>
+</div>
+<a href="https://corteatlas.com" style="display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 0 16px; background: #0E1116; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-decoration: none">corteatlas.com
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</article>
+<div class="akx-link" aria-hidden="true" style="position: relative; overflow: hidden; width: 2px; height: 56px; margin: 0 auto; background: #0E1116"><div class="akx-pulse" style="width: 2px; height: 18px; background: #2F5BEA"></div></div>
+</div>
+
+<!-- CERVEN -->
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column">
+<article style="flex: 1 1 auto; background: #FFFFFF; border: 1px solid #0E1116; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid #0E1116; font-family: 'IBM Plex Mono', monospace; font-size: 12px"><span>MOD-02</span><span style="color: #555A61">TELERADIOLOGÍA</span></div>
+<div role="img" aria-label="Demostración animada de Cerven en uso" style="position: relative; height: 210px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; border-bottom: 1px solid #D9D9D3">
+<div style="flex: 0 0 26px; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 10px; background: #ECECE8; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #555A61">
+<span>cerven.io · <span data-label="cerven">Lista de trabajo</span></span>
+<span style="display: flex; gap: 3px"><span data-dot="cerven" style="width: 12px; height: 3px"></span><span data-dot="cerven" style="width: 12px; height: 3px"></span><span data-dot="cerven" style="width: 12px; height: 3px"></span></span>
+</div>
+<div style="position: relative; flex: 1 1 auto">
+
+<div data-scene="cerven" style="position: absolute; inset: 0; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; font-size: 11px">
+<div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61; padding-bottom: 4px; border-bottom: 1px solid #E4E4DF"><span>ESTUDIO</span><span>ESTADO</span></div>
+<div class="akx-in" style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid #F0F0EC; animation-delay: 0.2s"><span><span style="display: inline-block; width: 6px; height: 6px; background: #E5484D; margin-right: 6px"></span>TC de cráneo</span>
+<span style="display: grid"><span class="akx-out" style="grid-area: 1 / 1; padding: 1px 6px; background: #F4F4F1; color: #555A61; font-family: 'IBM Plex Mono', monospace; font-size: 9px; animation-duration: 3.4s">PENDIENTE</span><span class="akx-swapin" style="grid-area: 1 / 1; padding: 1px 6px; background: #2F5BEA; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 9px; animation-duration: 3.4s">ASIGNADO</span></span></div>
+<div class="akx-in" style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid #F0F0EC; animation-delay: 0.6s"><span>RM de rodilla</span><span style="padding: 1px 6px; background: #F4F4F1; color: #555A61; font-family: 'IBM Plex Mono', monospace; font-size: 9px">PENDIENTE</span></div>
+<div class="akx-in" style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px solid #F0F0EC; animation-delay: 1s"><span>RX de tórax</span><span style="padding: 1px 6px; background: #0E1116; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 9px">INFORMADO</span></div>
+<div class="akx-in" style="display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 0; animation-delay: 1.4s"><span>TC de abdomen</span><span style="padding: 1px 6px; background: #F4F4F1; color: #555A61; font-family: 'IBM Plex Mono', monospace; font-size: 9px">PENDIENTE</span></div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #2F5BEA; animation-duration: 4.8s"></div>
+</div>
+
+
+<div data-scene="cerven" data-off style="position: absolute; inset: 0; padding: 10px 12px; display: flex; gap: 10px">
+<div style="flex: 0 0 38%; background: #0B0D11; display: flex; align-items: center; justify-content: center">
+<svg viewBox="0 0 100 120" width="80%" height="80%" aria-hidden="true"><ellipse cx="50" cy="60" rx="38" ry="50" fill="#3A3E45" stroke="#D6D8DC" stroke-width="3"></ellipse><ellipse cx="50" cy="60" rx="32" ry="44" fill="#5A606A"></ellipse><path d="M44 46 q-9 8 -4 20 q3 -8 6 -4 z" fill="#14161A"></path><path d="M56 46 q9 8 4 20 q-3 -8 -6 -4 z" fill="#14161A"></path></svg>
+</div>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 7px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61">INFORME · TC DE CRÁNEO</p>
+<p style="margin: 0; font-size: 10px; font-weight: 600">Hallazgos</p>
+<div class="akx-grow" style="height: 6px; width: 92%; background: #D9D9D3; animation-delay: 0.3s"></div>
+<div class="akx-grow" style="height: 6px; width: 78%; background: #D9D9D3; animation-delay: 1s"></div>
+<div class="akx-grow" style="height: 6px; width: 86%; background: #D9D9D3; animation-delay: 1.7s"></div>
+<p class="akx-in" style="margin: 4px 0 0; font-size: 10px; font-weight: 600; animation-delay: 2.3s">Conclusión</p>
+<div class="akx-grow" style="height: 6px; width: 64%; background: #2F5BEA; opacity: 0.55; animation-delay: 2.6s"></div>
+</div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #2F5BEA; animation-duration: 4.8s"></div>
+</div>
+
+
+<div data-scene="cerven" data-off style="position: absolute; inset: 0; padding: 14px; display: flex; flex-direction: column; gap: 10px; justify-content: center">
+<div style="border: 1px solid #D9D9D3; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61">INFORME LISTO · TC DE CRÁNEO</p>
+<div style="height: 5px; width: 90%; background: #E4E4DF"></div>
+<div style="height: 5px; width: 70%; background: #E4E4DF"></div>
+</div>
+<div style="display: grid; height: 34px">
+<span class="akx-out" style="grid-area: 1 / 1; display: flex; align-items: center; justify-content: center; background: #0E1116; color: #FFFFFF; font-size: 11px; font-weight: 600; animation-duration: 3.6s">Firmar y enviar</span>
+<span class="akx-swapin" style="grid-area: 1 / 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: #2F5BEA; color: #FFFFFF; font-size: 11px; font-weight: 600; animation-duration: 3.6s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Enviado al centro</span>
+</div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #2F5BEA; animation-duration: 4.8s"></div>
+</div>
+
+
+</div>
+</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="flex: 0 0 44px; height: 44px; box-sizing: border-box; border: 1.5px dashed #A9ABA4; display: flex; align-items: center; justify-content: center"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61">LOGO</span></div>
+<h3 style="margin: 0; font-size: 24px; font-weight: 600">Cerven</h3>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3B3F45">Plataforma de teleradiología.</p>
+</div>
+<a href="https://cerven.io" style="display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 0 16px; background: #0E1116; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-decoration: none">cerven.io
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</article>
+<div class="akx-link" aria-hidden="true" style="position: relative; overflow: hidden; width: 2px; height: 56px; margin: 0 auto; background: #0E1116"><div class="akx-pulse" style="width: 2px; height: 18px; background: #2F5BEA; animation-delay: 0.7s"></div></div>
+</div>
+
+<!-- VERBATO -->
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column">
+<article style="flex: 1 1 auto; background: #FFFFFF; border: 1px solid #0E1116; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid #0E1116; font-family: 'IBM Plex Mono', monospace; font-size: 12px"><span>MOD-03</span><span style="color: #555A61">VOZ A TEXTO</span></div>
+<div role="img" aria-label="Demostración animada de Verbato en uso" style="position: relative; height: 210px; background: #F7F7F4; overflow: hidden; display: flex; flex-direction: column; border-bottom: 1px solid #D9D9D3">
+<div style="flex: 0 0 26px; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 10px; background: #ECECE8; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #555A61">
+<span>verbato.io · <span data-label="verbato">Grabar</span></span>
+<span style="display: flex; gap: 3px"><span data-dot="verbato" style="width: 12px; height: 3px"></span><span data-dot="verbato" style="width: 12px; height: 3px"></span><span data-dot="verbato" style="width: 12px; height: 3px"></span></span>
+</div>
+<div style="position: relative; flex: 1 1 auto">
+
+<div data-scene="verbato" style="position: absolute; inset: 0; padding: 14px; display: flex; flex-direction: column; justify-content: center; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 11px">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span class="akx-blink" style="width: 9px; height: 9px; border-radius: 50%; background: #E5484D"></span>Grabando</span>
+<span>00:12</span>
+</div>
+<div data-bars aria-hidden="true" style="height: 64px; display: flex; align-items: center; gap: 3px">
+
+</div>
+<div style="display: flex; justify-content: center; gap: 8px">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #E5484D; display: flex; align-items: center; justify-content: center"><span style="width: 12px; height: 12px; background: #FFFFFF"></span></span>
+</div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #2F5BEA; animation-duration: 5.4s"></div>
+</div>
+
+
+<div data-scene="verbato" data-off style="position: absolute; inset: 0; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.45">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61">HABLANTE 1 · 00:04</p>
+<div class="akx-type" style="animation-delay: 0.2s">Buenos días a todos, empezamos</div>
+<div class="akx-type" style="animation-delay: 1.4s">con el resumen del trimestre y</div>
+<div class="akx-type" style="animation-delay: 2.6s">los próximos lanzamientos.</div>
+<p class="akx-in" style="margin: 6px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61; animation-delay: 3.4s">HABLANTE 2 · 00:11</p>
+<div class="akx-type" style="animation-delay: 3.6s">Perfecto, comparto la pantalla.</div>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #2F5BEA; animation-duration: 5.4s"></div>
+</div>
+
+
+<div data-scene="verbato" data-off style="position: absolute; inset: 0; padding: 14px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #555A61">EXPORTAR TRANSCRIPCIÓN</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px">
+<span class="akx-in" style="padding: 5px 9px; border: 1px solid #0E1116; animation-delay: 0.2s">.TXT</span>
+<span class="akx-in" style="padding: 5px 9px; background: #0E1116; color: #FFFFFF; animation-delay: 0.5s">.DOCX</span>
+<span class="akx-in" style="padding: 5px 9px; border: 1px solid #0E1116; animation-delay: 0.8s">.SRT</span>
+<span class="akx-in" style="padding: 5px 9px; border: 1px solid #0E1116; animation-delay: 1.1s">.PDF</span>
+</div>
+<div style="height: 6px; background: #E4E4DF"><div class="akx-grow" style="height: 6px; background: #2F5BEA; animation-duration: 2s; animation-delay: 1.4s"></div></div>
+<p class="akx-in" style="margin: 0; font-size: 11px; color: #3B3F45; animation-delay: 3.4s">Listo · reunion-trimestral.docx</p>
+<div class="akx-prog" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #2F5BEA; animation-duration: 5.4s"></div>
+</div>
+
+
+</div>
+</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="flex: 0 0 44px; height: 44px; box-sizing: border-box; border: 1.5px dashed #A9ABA4; display: flex; align-items: center; justify-content: center"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61">LOGO</span></div>
+<h3 style="margin: 0; font-size: 24px; font-weight: 600">Verbato</h3>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3B3F45">Transcripción de audio a texto, para cualquier ámbito.</p>
+</div>
+<a href="https://verbato.io" style="display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 0 16px; background: #0E1116; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-decoration: none">verbato.io
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</article>
+<div class="akx-link" aria-hidden="true" style="position: relative; overflow: hidden; width: 2px; height: 56px; margin: 0 auto; background: #0E1116"><div class="akx-pulse" style="width: 2px; height: 18px; background: #2F5BEA; animation-delay: 1.4s"></div></div>
+</div>
+
+<!-- HIS -->
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column">
+<article style="flex: 1 1 auto; background: #EDEDE8; border: 1px dashed #8C9096; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; padding: 10px 14px; border-bottom: 1px dashed #8C9096; font-family: 'IBM Plex Mono', monospace; font-size: 12px"><span>MOD-04</span><span style="color: #555A61">SISTEMA HIS</span></div>
+<div role="img" aria-label="Vista previa del HIS, en desarrollo" style="position: relative; height: 210px; overflow: hidden; border-bottom: 1px dashed #8C9096">
+<div aria-hidden="true" style="position: absolute; inset: 14px; display: flex; gap: 8px; opacity: 0.55">
+<div style="flex: 0 0 22%; display: flex; flex-direction: column; gap: 6px"><div class="akx-blink" style="height: 8px; background: #CFCFC8; animation-duration: 1.8s"></div><div class="akx-blink" style="height: 8px; background: #CFCFC8; animation-duration: 1.8s; animation-delay: 0.2s"></div><div class="akx-blink" style="height: 8px; background: #CFCFC8; animation-duration: 1.8s; animation-delay: 0.4s"></div><div class="akx-blink" style="height: 8px; background: #CFCFC8; animation-duration: 1.8s; animation-delay: 0.6s"></div></div>
+<div style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 8px"><div style="display: flex; gap: 6px"><div class="akx-blink" style="flex: 1; height: 40px; background: #D9D9D3; animation-duration: 1.8s"></div><div class="akx-blink" style="flex: 1; height: 40px; background: #D9D9D3; animation-duration: 1.8s; animation-delay: 0.3s"></div><div class="akx-blink" style="flex: 1; height: 40px; background: #D9D9D3; animation-duration: 1.8s; animation-delay: 0.6s"></div></div><div class="akx-blink" style="flex: 1; background: #D9D9D3; animation-duration: 1.8s; animation-delay: 0.9s"></div></div>
+</div>
+<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><span style="padding: 6px 12px; background: #0E1116; color: #FFFFFF; font-family: 'IBM Plex Mono', monospace; font-size: 12px">EN DESARROLLO</span></div>
+</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="flex: 0 0 44px; height: 44px; box-sizing: border-box; border: 1.5px dashed #A9ABA4; display: flex; align-items: center; justify-content: center"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #555A61">LOGO</span></div>
+<h3 style="margin: 0; font-size: 24px; font-weight: 600; color: #3B3F45">HIS</h3>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3B3F45">Sistema de información hospitalaria.</p>
+</div>
+<span style="display: flex; align-items: center; min-height: 48px; padding: 0 16px; border-top: 1px dashed #8C9096; color: #3B3F45; font-family: 'IBM Plex Mono', monospace; font-size: 14px">PRÓXIMAMENTE</span>
+</article>
+<div class="akx-link" aria-hidden="true" style="width: 0; height: 56px; margin: 0 auto; border-left: 2px dashed #8C9096"></div>
+</div>
+
+</div>
+<div class="akx-base" style="background: #0E1116; color: #F4F4F1; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between">
+<p style="margin: 0; font-weight: 700; font-size: 22px; letter-spacing: -0.02em">arkhenix<span style="color: #8EA9FF">.</span></p>
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9ADB3">ORIGEN TECNOLÓGICO · SOLUCIONES DE SOFTWARE</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contacto" style="background: #0E1116; color: #F4F4F1; border-top: 1px solid #2A2E35">
+<div style="max-width: 1280px; margin: 0 auto; padding: 80px 32px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between">
+<h2 style="margin: 0; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">Hablemos.</h2>
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 22px">[correo de contacto]</p>
+</div>
+<div style="max-width: 1280px; margin: 0 auto; padding: 24px 32px 32px; border-top: 1px solid #2A2E35; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A9ADB3">
+<p style="margin: 0">© 2026 Arkhenix</p>
+<p style="margin: 0">arkhenix.com</p>
+</div>
+</section>
+
+</div>
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cfg = {
+    corte:   { ms: 4200, labels: ['Atlas', 'Cortes', 'Medición'], on: '#8EA9FF', off: 'rgba(255,255,255,0.22)' },
+    cerven:  { ms: 4800, labels: ['Lista de trabajo', 'Informe', 'Firma'], on: '#2F5BEA', off: '#CFCFC8' },
+    verbato: { ms: 5400, labels: ['Grabar', 'Transcribir', 'Exportar'], on: '#2F5BEA', off: '#CFCFC8' }
+  };
+  var boxes = document.querySelectorAll('[data-bars]');
+  for (var b = 0; b < boxes.length; b++) {
+    for (var i = 0; i < 28; i++) {
+      var s = document.createElement('span');
+      s.className = 'akx-wave';
+      s.style.cssText = 'flex:1 1 0;height:' + (14 + ((i * 37) % 46)) + 'px;background:#2F5BEA;animation-delay:' + ((i * 0.137) % 1).toFixed(2) + 's';
+      boxes[b].appendChild(s);
+    }
+  }
+  Object.keys(cfg).forEach(function (key) {
+    var c = cfg[key], n = 0;
+    function show(idx) {
+      var scenes = document.querySelectorAll('[data-scene="' + key + '"]');
+      for (var j = 0; j < scenes.length; j++) {
+        if (j === idx) {
+          var fresh = scenes[j].cloneNode(true);
+          fresh.removeAttribute('data-off');
+          scenes[j].parentNode.replaceChild(fresh, scenes[j]);
+        } else {
+          scenes[j].setAttribute('data-off', '');
+        }
+      }
+      var label = document.querySelector('[data-label="' + key + '"]');
+      if (label) label.textContent = c.labels[idx];
+      var dots = document.querySelectorAll('[data-dot="' + key + '"]');
+      for (var d = 0; d < dots.length; d++) dots[d].style.background = d === idx ? c.on : c.off;
+    }
+    show(0);
+    if (!reduce) setInterval(function () { n = (n + 1) % 3; show(n); }, c.ms);
+  });
+})();
+</script>
+</body>
+</html>
